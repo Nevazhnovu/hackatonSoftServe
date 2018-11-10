@@ -14,9 +14,10 @@ lessons_a_Week = max_lessons * days
 file_input_load = "input.txt"
 file_input_blocks = "teacher_blocks.txt"
 
-
+# not debugged & barely working... :(
+"""
 # returns load[ int(number if class) ]['name of lesson'] == int(number of hours)
-"""def get_study_load(file_name):
+def get_study_load(file_name):
     with codecs.open(file_name, "r", encoding='utf-8') as f:
         load = []
         content = f.readlines()
@@ -95,6 +96,8 @@ def generate_teachers():
     return teachers
 """
 
+
+
 def check_teachers(data):
     teachers_a_day = []
     for i in data:
@@ -170,7 +173,7 @@ separ = "_"
            # random.choice(subjects) + separ + str(random.randint(1, 31)) + separ + str(random.randint(1, min_teachers)))
 #print(res)
 isfalse = True
-while isfalse == True:
+while isfalse:
     for i in range(40):
         for j in range(18):
             subject = random.choice(subjects)
